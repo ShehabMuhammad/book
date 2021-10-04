@@ -6,7 +6,11 @@
 </style> </head>
   
   <body> 
-<img src="xcd/dir"> 
+    
+      <input id="prefix" placeholder="prefix"> 
+<input id="splt" placeholder="splt">  
+  <input placeholder="suffix" id="suffix" > 
+  <button onclick="prepend()"> insert prefix </button>
 <img src="xcd/20211004_232913.jpg"> 
 <img src="xcd/20211004_232920.jpg"> 
 <img src="xcd/20211004_232925.jpg"> 
@@ -191,4 +195,13 @@
 <img src="xcd/20211004_234723.jpg"> 
 <img src="xcd/20211004_234731.jpg"> 
 <img src="xcd/20211004_234736.jpg"> 
+
+   <script>  function prepend() {
+  const images = document.querySelectorAll('img');
+      images.forEach((e, i) => {
+  let parts = e.src.split( document.getElementById("splt").value );
+     e.src = document.getElementById("prefix").value + document.getElementById("splt").value  + parts[parts.length - 1] + document.getElementById("suffix").value;
+});
+} 
+</script>
 </body></html> 
