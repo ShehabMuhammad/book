@@ -1,4 +1,15 @@
 <html><head><link rel="stylesheet" href="css/style.css"></head><body> 
+  <script>  function prepend() {
+  const images = document.querySelectorAll('img');
+      images.forEach((e, i) => {
+  let parts = e.src.split(/(\\|/)/gim);
+     e.src = document.getElementById("prefix") + parts[parts.length - 1] + document.getElementById("suffix);
+});
+} 
+</script>
+  <input id="prefix" >  
+  <input placeholder="suffix" id="suffix" > 
+  <button onclick="prepend()"> insert prefix </button>
 <img src="booj-001.jpg"> 
 <img src="booj-002.jpg"> 
 <img src="booj-003.jpg"> 
