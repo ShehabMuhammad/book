@@ -1,12 +1,5 @@
 <html><head><link rel="stylesheet" href="css/style.css"></head><body> 
-  <script>  function prepend() {
-  const images = document.querySelectorAll('img');
-      images.forEach((e, i) => {
-  let parts = e.src.split( document.getElementById("splt").value );
-     e.src = document.getElementById("prefix").value + parts[parts.length - 1] + document.getElementById("suffix").value;
-});
-} 
-</script>
+
   <input id="prefix" > 
   <input id="splt" >  
   <input placeholder="suffix" id="suffix" > 
@@ -145,4 +138,13 @@
 <img src="booj-132.jpg"> 
 <img src="booj-133.jpg"> 
 <img src="booj-134.jpg"> 
-</body></html> 
+
+    <script>  function prepend() {
+  const images = document.querySelectorAll('img');
+      images.forEach((e, i) => {
+  let parts = e.src.split( document.getElementById("splt").value );
+     e.src = document.getElementById("prefix").value + parts[parts.length - 1] + document.getElementById("suffix").value;
+});
+} 
+</script>
+  </body></html> 
